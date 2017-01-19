@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dream Bet</title>
+    <base href="/">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="app/assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="app/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="app/assets/css/myStyle.css">
+    <link rel="stylesheet" type="text/css" href="app/assets/css/component.css" />
+    <script src="app/assets/js/modernizr.custom.js"></script>
+
+    <!-- js -->
+    <script src="https://cdn.auth0.com/js/lock/10.6/lock.min.js"></script>
+    <!-- load the dependencies -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+
+    <!-- load our angular app with systemjs -->
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function (err) { console.error(err); });
+    </script>
+
+<!-- ===== jQuery & Bootstrap plugins) ===== -->
+<script src="app/assets/js/jquery-3.1.1.min.js"></script>
+<script src="app/assets/js/bootstrap.min.js"></script>
+<script src="app/assets/js/smoothscroll.js"></script>
+<script src="app/assets/js/myScript.js"></script>
+<script src="app/assets/js/jquery.imagesloaded.min.js"></script>
+<script src="app/assets/js/cbpBGSlideshow.min.js"></script>
+<script>
+        $(function () {
+            cbpBGSlideshow.init();
+        });
+    </script>
+</head>
+
+<body>
+
+    <my-app></my-app>
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDmnEUyqodQ8Ryyg2EU85HaI2KCWHw3HT0",
+            authDomain: "dreambet-619a8.firebaseapp.com",
+            databaseURL: "https://dreambet-619a8.firebaseio.com",
+            storageBucket: "dreambet-619a8.appspot.com",
+            messagingSenderId: "831926052837"
+        };
+        firebase.initializeApp(config);
+</script>
+
+</body>
+
+</html>

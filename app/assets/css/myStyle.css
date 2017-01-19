@@ -1,0 +1,1042 @@
+/* Import google fonts */
+/*@import url('https://fonts.googleapis.com/css?family=Work+Sans:200');
+@import url('https://fonts.googleapis.com/css?family=Assistant:200|Work+Sans:200');*/
+
+
+/* General styles for the body */
+body {
+    background-color: #002222;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: small;
+    margin: 0;
+    padding: 0;
+    color: white; /* while dvping - to be changed after */
+    box-sizing: border-box;
+
+}
+
+*:focus { 
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Begin fonts */
+@font-face {
+    font-family: 'Open Sans Condensed';
+    source : url(OpenSans-CondLight.ttf);
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../fonts/openSans/OpenSans-Light-webfont.eot');
+    src: url('../fonts/openSans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/openSans/OpenSans-Light-webfont.woff') format('woff'),
+         url('../fonts/openSans/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../fonts/openSans/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ===End fonts=== */
+
+/* Removing the uncessary margin on the overall container */
+.container-fluid {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Styling the logo */
+h1.nav-brand img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+/* Navbar styles */
+
+.navbar-default {
+    background-color: #001616;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+.navbar-default .navbar-nav>li>a {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 15px;
+    color: #9c9ead;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: white;
+}
+
+.navbar-nav>li>a.nav-active {
+    color: #bf9a5a;
+}
+
+.navbar>.container-fluid .navbar-brand {
+    margin-left: 0;
+}
+
+/* styling the create account button on the top right - navbar */
+.btn-navbar>#create-account {
+    background: transparent;
+    color: #000;
+    background-color: #bf9a5a;
+    border-color: #bf9a5a;
+}
+
+.btn-navbar>#create-account:hover,
+.btn-navbar>#create-account:active,
+.btn-navbar>#create-account:focus {
+    color: #bf9a5a;
+    border-color: #bf9a5a;
+    background: transparent;
+}
+
+/* styling the login button on the top right - navbar */
+.btn-navbar>.myLoginBtn {
+    color: #bf9a5a;
+    border: 1px solid #bf9a5a;
+    background: transparent;
+}
+
+.btn-navbar>.myLoginBtn:hover,
+.btn-navbar>.myLoginBtn:focus,
+.btn-navbar>.myLoginBtn:active {
+    color: #9c9ead;
+    border: 1px solid #9c9ead;
+    background: transparent;
+}
+
+.navbar>.container-fluid>ul.navbar-right {
+    margin-right: 30px;
+}
+
+/* resetting bootstrap btn styles */
+.btn.active.focus, 
+.btn.active:focus, 
+.btn.focus, 
+.btn:active.focus, 
+.btn:active:focus, 
+.btn:focus {
+  outline:  none;
+}
+
+/*styling the drop-down menu*/
+
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a:hover {
+    color: #bf9a5a;
+    background-color: rgb(0, 22, 22);
+}
+.navbar-nav>li>.dropdown-menu {
+    margin-top: -10px;
+}
+.dropdown-menu {
+    padding: 0;
+    background-color: #001616;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.dropdown-menu>li {
+    border-bottom: 1px dotted rgba(237, 239, 255, .2);
+}
+
+.dropdown-menu>li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu>li>a {
+    color: #9c9ead;
+   /* text-align: center;*/
+    padding: 5px 20px;
+    border-radius: 3px;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    text-align: center;
+    background-color: #bf9a5a;
+    color: black;
+}
+
+/* re-styling the buttons on the navbar */
+.navbar-nav>li>.btn-navbar {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 8px;
+    padding-bottom: 0px;
+}
+
+/* Defining the animation for the hand in the navbar */
+@-webkit-keyframes animMenu { 0% {top: 0; left: -5px;} 50% {top: 0; left: 0;} 100% {top: 0; left: -5px;} }
+@-moz-keyframes animMenu { 0% {top: 0; left: -5px;} 50% {top: 0; left: 0px;} 100% {top: 0; left: -5px;} }
+@-o-keyframes animMenu { 0% {top: 0; left: -5px;} 50% {top: 0; left: 0;} 100% {top: 0; left: -5px;} }
+@keyframes animMenu { 0% {top: 0; left: -5px;} 50% {top: 0; left: 0;} 100% {top: 0; left: -5px;} }
+
+/* styling the hand icon on the navbar */
+.nav>li span.glyphicon-hand-right {
+  -webkit-animation: animMenu .9s ease-in-out infinite;
+    -moz-animation: animMenu .9s ease-in-out infinite;
+    -o-animation: animMenu .9s ease-in-out infinite;
+    animation: animMenu .9s ease-in-out infinite;
+}
+
+/********** MAIN CONTENT STYLES **********/
+#mainContent {
+    margin-top: 50px;
+    overflow-x: hidden;
+    position: relative;
+}    
+
+/* re-styling the mainContent on the homepage */
+#mainContent.main {
+    margin-top: 15px;
+}
+
+.mainSection, .dream-realisation {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 25px;
+    font-family: 'open_sanslight', sans-serif;
+    color: #ffffff;
+    font-size: 1.16em;
+    background-color: rgba(0, 28, 28, .9);
+    border-radius: 4px;
+    /*box-shadow: 1px 1px 1px #545454;*/
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+/* mainContent padding for the createaccount.html page */
+#mainContent.mainContent-loginPage {
+    margin-top: 15px;
+    position: relative;
+}
+
+#mainContent.mainContent-loginPage .mainSection {
+  width: 60%;  
+  min-width: 400px;
+  border-radius: 4px;
+  background-image: url("../img/mrgreen.jpg");
+}
+
+#mainContent.mainContent-loginPage .signIn {
+    width: 100%;
+    color: #fff;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #104242;
+}
+
+i.back-one {
+  font-size: 1.7em;
+  color: #9c9ead;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+i.back-one:hover {
+  color: #fefefe;
+}
+
+/* === #create-account-form on the login.html page === */
+#create-account-form {
+  width: 390px;
+  margin: 0 auto;
+  margin-top: 90px;
+}
+
+#create-account-form .form-group #emailAddr.form-control,
+#create-account-form .form-group #pwd.form-control,
+#create-account-form .form-group #fullname.form-control,
+#create-account-form .form-group #pwd-confirm.form-control {
+  width: 338px;
+  height: 56px;
+  border: 1px solid #fff;
+}
+
+#create-account-form .form-group>.input-group>.input-group-addon {
+  font-size: 28px;
+  color: #cecaca;
+  background-color: #fff;
+  border: none;
+}
+
+#create-account-form .form-group>.input-group>.input-group-addon.pwd {
+  padding: 6px 17px;
+}
+
+#create-account-form .form-group>.input-group>.input-group-addon.fullname {
+  padding: 6px 16px;
+}
+
+#create-account-form button#signInBtn {
+  width: 390px;
+  height: 56px;
+}
+
+#create-account-form button#signInBtn {
+  background-color: #104242;
+  color: #fff;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border: none;
+}
+
+#create-account-form button#signInBtn:hover {
+  background-color: #1b8a8a;
+}
+
+#create-account-form p.pwdForgot>a:hover,
+#create-account-form p.login>a:hover {
+  color: #bf9a5a;
+  text-decoration: none;
+  border-bottom: 1px dotted #bf9a5a;
+}
+
+p.login>a {
+  cursor: pointer;
+}
+
+
+}
+/* === end create-account-form === */
+
+
+/* re-styling the mainSection on the pages with the image jumbotron */
+.mainSection.mainSection-home, 
+.mainSection.mainSection-about,
+.mainSection.mainSection-report {
+    margin-top: 0px;
+}
+
+.mainSection.mainSection-about.about-first {
+  margin-left: 50px;
+  margin-right: 20px;
+  margin-top: 50px;
+  padding-bottom: 36px;
+  padding-top: 90px;
+  width: 48%;
+  float: left;
+}
+
+.mainSection.mainSection-about.about-second {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 10px;
+  width: 42%;
+  float: left;
+}
+
+.mainSection.mainSection-about.about-second .fa-angle-double-right {
+  color: #bf9a5a;
+}
+
+.mainSection.mainSection-about.about-second ul {
+  border-bottom: 1px dotted gray;
+  padding-bottom: 20px;
+}
+
+.mainSection.mainSection-about.about-second ul:last-child {
+  border-bottom: none;
+}
+
+.mainSection.mainSection-about.about-second>h3.sectionHeaders:first-child {
+  margin-top: 0;
+}
+
+.mainSection.mainSection-contact {
+    width: 80%;
+    margin-top: 50px;
+    font-size: 1.3em;
+    line-height: 1.8em;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+.mainSection.mainSection-contact.row {
+    margin-top: 15px;
+
+}
+
+.mainSection-contact .sectionHeaders {
+    font-size: 3em;
+    margin-top: 0;
+}
+
+.mainSection-contact.row .sectionHeaders {
+    font-size: 1.4em;
+}
+
+.mainSection-contact .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.mainSection-contact a {
+  border-bottom: 1px dashed #337ab7;
+}
+
+.mainSection-contact a:hover {
+  color: #9c9ead;
+  text-decoration: none;
+  border-bottom: 1px solid #9c9ead;
+}
+
+.mainSection-contact .fa {
+  color: #bf9a5a;
+}
+
+.mainSection-home .fa {
+  color: #bf9a5a;
+}
+
+/* Positioning the banner */
+#mainContent #slider_image {
+     width: 100%;
+}
+
+/* bg-image */
+
+.bg-image>img { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+  opacity: .12;
+}
+
+.bg-image.bg-img-about>img {
+  opacity: .4;
+}
+
+/*** End bg-image--contactUs page ***/
+
+.dreamBet {
+    color: #bf9a5a;
+    font-weight: bold;
+}
+
+ .sectionHeaders {
+    color: #bf9a5a;
+}
+
+.mainSection ul li,
+.dream-realisation ul li {
+    list-style: none;
+}
+
+.mainSection span,
+.dream-realisation span {
+    color:  #bf9a5a;
+}
+
+/********** AboutUs PAGE **********/
+.image-header-about {
+  position: relative;
+  margin-top: -70px;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  z-index: -50;
+}
+
+.image-header-about div.report-banner {
+  width: 100%;
+  font-size: 2.5em;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  color: #000;
+  padding: 25px 0 25px 0;
+  overflow:hidden;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 100;
+  background-color: #bf9a5a;;
+  background-color: rgba(191, 154, 90, .6);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .5);
+  -webkit-background-attachment: fixed;
+     -moz-background-attachment: fixed;
+      -ms-background-attachment: fixed;
+       -o-background-attachment: fixed;
+          background-attachment: fixed;
+}
+
+div.report-banner.slide-left{
+  animation: slideleft-report 1s ease-in-out;
+}
+
+@keyframes slideleft-report {
+  from {
+    margin-left: -1500px;
+    width: 100%; 
+  }
+
+  to {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+div.slide-left {
+  width:200px;
+  font-size: 1.8em;
+  font-weight: 500;
+  text-align: left;
+  color: #000;
+  padding: 5px 8px 0 36px;
+  overflow:hidden;
+  position: absolute;
+  top: 3.5%;
+  left: -2%;
+  z-index: 100;
+  border-radius: 0 4px 4px 0;
+  -webkit-border-radius: 0 4px 4px 0;
+  background-color: #bf9a5a;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+div.slide-left>p {
+  margin-bottom: 5px;
+}
+
+div.slide-left{
+  animation: slideleft 1s ease-in-out;
+}
+
+@keyframes slideleft {
+  from {
+    margin-left: -300px;
+    width: 200px; 
+  }
+
+  to {
+    margin-left: 0;
+    width: 200px;
+  }
+}
+
+
+/********** DreamHouse Page **********/
+
+.table-hover > tbody > tr:hover {
+    background-color: /*#001616*/ rgba(67, 117, 66, .52);
+}
+
+.table > tbody + tbody {
+    border-top: 1px solid rgba(237, 239, 255, 0.08);
+}
+
+.table > tbody > tr.active > th {
+    background-color:  rgba(67, 117, 66, .52);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: rgba(67, 117, 66, .52);
+}
+
+#houseTiles section img {
+    width: 450px;
+    height: 267px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* styling the hd_image */
+#mainContent #slider_image #watch_hd {
+    margin-top: -20px;
+    margin-left: 0;
+}
+
+#mainContent #slider_image #car_hd {
+    margin-top: -20px;
+}
+
+/* Fade content bs-carousel with hero headers */
+
+/********************************/
+/*       Fade Bs-carousel       */
+/********************************/
+.fade-carousel {
+    height: 620px;/*for safari*/
+    height: 78vh;
+}
+.fade-carousel .carousel-inner .item {
+    height: 620px;/*for safari*/
+    height: 78vh;
+}
+.fade-carousel .carousel-indicators > li {
+    margin: 0 2px;
+    background-color: transparent;
+    border-color: #f39c12;
+    opacity: .7;
+}
+.fade-carousel .carousel-indicators >li.active {
+  background-color: #f39c12; 
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+/********************************/
+/*          Hero Headers        */
+/********************************/
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    /*text-transform: uppercase;*/
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+
+.hero h1 {
+    font-size: 4.2em;    
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  
+}
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s; 
+}
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s;    
+}
+
+
+/********************************/
+/*          Custom Buttons      */
+/********************************/
+.btn.btn-lg {padding: 10px 40px;}
+.btn.btn-hero,
+.btn.btn-hero:focus {
+    color: #f5f5f5;
+    background-color: #0e5a4b;
+    border-color: #0e5a4b;
+    outline: none;
+    margin: 20px auto;
+}
+
+.btn.btn-hero:hover {
+    background-color: #11806a;
+    border: 1px solid #11806a;
+}
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+.fade-carousel .slides .slide-1, 
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3,
+.fade-carousel .slides .slide-4,
+.fade-carousel .slides .slide-5,
+.fade-carousel .slides .slide-6,
+.fade-carousel .slides .slide-7 {
+  height: 620px;/*for safari*/
+  height: 78vh;
+  -webkit-background-attachment: fixed;
+     -moz-background-attachment: fixed;
+      -ms-background-attachment: fixed;
+       -o-background-attachment: fixed;
+          background-attachment: fixed;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+      -ms-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+  -webkit-background-position: center center;
+     -moz-background-position: center center;
+      -ms-background-position: center center;
+       -o-background-position: center center;
+          background-position: center center;
+  -webkit-background-repeat: no-repeat;
+     -moz-background-repeat: no-repeat;
+      -ms-background-repeat: no-repeat;
+       -o-background-repeat: no-repeat;
+          background-repeat: no-repeat;
+  opacity: .5;
+}
+
+.fade-carousel .slides .slide-1 {
+  -webkit-background-image: url(../img/house_hd_6.jpg);
+          background-image: url(../img/house_hd_6.jpg); 
+}
+
+.fade-carousel .slides .slide-2 {
+  background-image: url(../img/car_hd_3.jpg);
+}
+
+.fade-carousel .slides .slide-3 {
+  background-image: url(../img/watch_hd_6.jpg);
+}
+
+.fade-carousel .slides .slide-4 {
+  background-image: url(../img/holiday_hd_2.jpg);
+}
+
+.fade-carousel .slides .slide-5 {
+  background-image: url(../img/wedding_hd_2.jpg);
+}
+
+.fade-carousel .slides .slide-6 {
+  background-image: url(../img/bike_hd.jpg);
+}
+
+.fade-carousel .slides .slide-7 {
+  background-image: url(../img/university_hd.jpg);
+}
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px){
+    .hero { width: 980px; }    
+}
+@media screen and (max-width: 640px){
+    .hero h1 { font-size: 4em; }    
+}
+
+/* Home page Tabs */
+/*** PANEL PRIMARY ***/
+.with-nav-tabs.panel-primary .nav-tabs > li > a,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+    color: #9c9ead;
+    background-color: rgba(67, 117, 66, .52);
+    border-bottom-color: #bf9a5a;
+}
+
+.with-nav-tabs.panel-primary .nav-tabs > .open > a,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+    color: #fff;
+    background-color: rgb(67, 117, 66);
+    background-color: rgba(67, 117, 66, .43);
+    border-color: transparent;
+    border-bottom-color: #bf9a5a;
+}
+
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:focus {
+    color: black;
+    background-color: #bf9a5a;
+    border-color: #bf9a5a;
+    border-bottom-color: transparent;
+}
+
+.bets-tabs {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.panel-body {
+    background-color: rgba(0, 28, 28, .9);
+    padding: 0;
+}
+
+.panel {
+    border-radius: 0px;
+    border: transparent;
+    background-color: transparent;
+}
+
+.panel-primary>.panel-heading {
+    background-color: rgba(0, 28, 28, .9);
+    border-bottom: none;
+    padding: 0;
+}
+
+.panel-heading {
+    padding: 0px 0px 15px 0px;
+}
+
+.panel-primary {
+    border: transparent;
+}
+
+.nav-tabs {
+    font-size: 1.4em;
+    border-bottom: 3px solid #bf9a5a;
+    border-right: none;
+    background-color: #002222;
+}
+
+.nav-tabs>li>a {
+    border-radius: 5px 5px 0 0;
+}
+
+/* Styling the tables in the tab-home page */
+.tab-content>.tab-pane>.table-responsive>.table>thead {
+    background-color: rgb(67, 117, 66);
+    background-color: rgba(67, 117, 66, .52);
+}
+
+.tab-content>.tab-pane>.table-responsive>.table>tfoot {
+    background-color: rgb(67, 117, 66);
+    background-color: rgba(67, 117, 66, .52);
+}
+
+.tab-content>.tab-pane>.table-responsive>.table.table-hover>tbody>tr:hover {
+    background-color: #012f2f;
+}
+
+.tab-content>.tab-pane>.table-responsive>.table.table-hover {
+    cursor: pointer;
+}
+
+.tab-content>.tab-pane>.table-responsive>.table>thead>tr>th {
+    text-align: center;
+}
+
+.tab-content>.tab-pane>.table-responsive>.table, 
+.tab-content>.tab-pane>.table-responsive>.table th, 
+.tab-content>.tab-pane>.table-responsive>.table td {
+    border: 1px solid rgb(0,0,0);
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.tab-content>.tab-pane>.table-responsive>table {
+    margin-bottom: 0;
+    min-width: 862px;
+}
+
+.dream-realisation .table {
+    font-size: small;
+}
+
+/* ABOUT US PAGE styles */
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+/* The Close Button */
+.modal-header .close {
+    color: #fff;
+    margin-top: -25px;
+    font-size: 25px;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 40px 16px 10px 16px;
+    background: transparent;
+    color: white;
+    border: none;
+    text-align: center;
+}
+
+.modal-header>h2 {
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+p.text-center {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+p.text-center>a {
+  color: #b6b6b6;
+}
+
+p.text-center>a:hover {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px dotted #fff;
+}
+
+
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-image: url(../img/mrgreen.jpg);
+    background-size: cover;
+    z-index: 5;
+    margin: 8% auto;
+    padding: 0;
+    width: 486px;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.9s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+/* styling the login form in the modal */
+#loginModal {
+  width: 390px;
+  margin: 0 auto;
+}
+
+#loginModal .form-group #emailAddr.form-control,
+#loginModal .form-group #pwd.form-control,
+#login {
+  width: 338px;
+  height: 56px;
+  border: 1px solid #fff;
+}
+
+#loginModal .form-group>.input-group>.input-group-addon {
+  font-size: 28px;
+  color: #cecaca;
+  background-color: #fff;
+  border: none;
+}
+
+#loginModal .form-group>.input-group>.input-group-addon.pwd {
+  padding: 6px 17px;
+}
+
+#loginModal button#signInBtn {
+  width: 390px;
+  height: 56px;
+}
+
+#loginModal button#signInBtn {
+  background-color: #ffbf4d;
+  color: #000;
+  border: none;
+}
+
+#loginModal button#signInBtn:hover {
+  background-color: #ffae12;
+}
+
+/* ===== Begin footer ===== */
+.footer-wrapper {
+  background-color: #001616;
+  color: #9c9ead;
+  /*border-top: 1px solid #252525;*/
+}
+
+.footer-wrapper .row {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-top {
+  padding: 40px 0 35px;
+}
+
+.footer-top .col-md-4 {
+  margin-bottom: 25px;
+}
+
+.footer {
+  padding: 30px 0;
+  background-color: #104242;
+}
+
+.footer a{
+  text-decoration: none;
+}
+
+/*Useful Links*/
+ul.imp-links {
+  list-style-type: none;
+  margin-top: 15px;
+  padding-left: 15px;
+}
+ul.imp-links li {
+  padding: 2px 0;
+}
+ul.imp-links li a {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: #9c9ead;
+}
+
+ul.imp-links li a.active {
+  color: #bf9a5a;
+  font-size: 1.2em;
+}
+
+ul.imp-links li a:hover {
+  color: #bf9a5a;
+  border-bottom: 1px dotted #bf9a5a;
+}
+
+/* cursor when hovering on the login link in the footer */
+ul.imp-links li a.myLoginBtn {
+  cursor: pointer;
+}
+
+.footer p {
+  color: #989b9d;
+}
+
+/* ===== End footer ===== */
